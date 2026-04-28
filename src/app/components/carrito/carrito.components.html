@@ -1,0 +1,35 @@
+<div class="carrito-cont">
+  <div class="carrito">
+    <header class="carrito-header">
+      <button class="back-button" routerLink="/">← Regresar al Catálogo</button>
+    </header>
+    <h1>Carrito de Compras</h1>
+    <div *ngIf="cartItems$ | async as items; else emptyCart">
+      <div class="cart-item" *ngFor="let item of items">
+        <div class="item-info">
+          <h3>{{ item.product.nombre }}</h3>
+          <p>Precio: ${{ item.product.precio }}</p>
+          <p>
+            Cantidad:
+            <input
+              type="number"
+              [value]="item.quantity"
+              (input)="updateQuantity(item.product.id, +$event.target.value)"
+              min="1"
+            />
+          </p>
+          <p>Total: ${{ item.product.precio * item.quantity }}</p>
+        </div>
+        <button (click)="removeItem(item.product.id)">Eliminar</button>
+      </div>
+      <div class="cart-total">
+        <h2>Total: ${{ getTotal() }}</h2>
+        <div id="paypal-button-container"></div>
+        <button (click)="downloadXML()">Descargar Recibos</button>
+      </div>
+    </div>
+    <ng-template #emptyCart>
+      <p>El carrito está vacío.</p>
+    </ng-template>
+  </div>
+</div>

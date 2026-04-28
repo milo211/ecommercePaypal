@@ -1,0 +1,28 @@
+<div class="product-card">
+  <div class="product-image">
+    <img
+      #productImg
+      [src]="'http://localhost:3300/images/' + product.imagen"
+      [alt]="product.nombre"
+      (load)="onImageLoad()"
+      (error)="onImageError($event)"
+      class="product-image"
+      [class.loaded]="isImageLoaded"
+    />
+  </div>
+
+  <div class="product-info">
+    <h3>{{ product.nombre }}</h3>
+    <p class="categoria">{{ product.categoria }}</p>
+    <p class="descripcion">{{ product.descripcion }}</p>
+
+    <div class="product-footer">
+      <span class="precio">${{ product.precio }}</span>
+      <span class="stock" [class.outofstock]="!product.instock">
+        {{ product.instock ? 'En Stock' : 'Agotado' }}
+      </span>
+    </div>
+
+    <button (click)="addToCart()" [disabled]="!product.instock">Agregar al Carrito</button>
+  </div>
+</div>

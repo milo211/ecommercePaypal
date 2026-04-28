@@ -1,0 +1,29 @@
+<div class="catalogo-cont">
+  <header class="header">
+    <h1>Hard Catalog</h1>
+    <button class="cart-button" routerLink="/carrito">🛒 Carrito</button>
+  </header>
+
+  <!-- Indicador de carga -->
+  <div *ngIf="loading" class="loading">
+    <p>Cargando productos...</p>
+  </div>
+
+  <!-- Mensaje de error -->
+  <div *ngIf="error" class="error-message">
+    <p>{{ error }}</p>
+    <button (click)="reloadProducts()">Reintentar</button>
+  </div>
+
+  <!-- Lista de productos que solo se muestran cuando se han cargado y no hay error -->
+  <div *ngIf="!loading && !error" class="productos-container">
+    <p *ngIf="products.length === 0" class="no-products">
+      No hay productos disponibles en este momento.
+    </p>
+
+    <div class="grid">
+      <product-card *ngFor="let product of products; trackBy: trackById" [product]="product">
+      </product-card>
+    </div>
+  </div>
+</div>

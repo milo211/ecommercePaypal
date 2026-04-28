@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<productos>
+  <producto>
+    <id>1</id>
+    <nombre>Laptop Gamer</nombre>
+    <descripcion>Laptop de alto rendimiento para gaming</descripcion>
+    <categoria>Electrónica</categoria>
+    <precio>1500</precio>
+    <imagen>../public/images/laptop.png</imagen>
+    <instock>true</instock>
+  </producto>
+  <producto>
+    <id>2</id>
+    <nombre>Mouse Inalámbrico</nombre>
+    <descripcion>Mouse ergonómico con batería recargable</descripcion>
+    <categoria>Accesorios</categoria>
+    <precio>50</precio>
+    <imagen>../public/images/mouse.png</imagen>
+    <instock>true</instock>
+  </producto>
+  <producto>
+    <id>3</id>
+    <nombre>Teclado Mecánico</nombre>
+    <descripcion>Teclado RGB con switches mecánicos</descripcion>
+    <categoria>Accesorios</categoria>
+    <precio>120</precio>
+    <imagen>../public/images/teclado.png</imagen>
+    <instock>false</instock>
+  </producto>
+  <producto>
+    <id>4</id>
+    <nombre>Monitor 4K</nombre>
+    <descripcion>Monitor UHD de 27 pulgadas</descripcion>
+    <categoria>Electrónica</categoria>
+    <precio>400</precio>
+    <imagen>../public/images/monitor.png</imagen>
+    <instock>true</instock>
+  </producto>
+  <producto>
+    <id>5</id>
+    <nombre>Auriculares Bluetooth</nombre>
+    <descripcion>Auriculares con cancelación de ruido</descripcion>
+    <categoria>Audio</categoria>
+    <precio>200</precio>
+    <imagen>../images/auriculares.webp</imagen>
+    <instock>true</instock>
+  </producto>
+  <producto>
+    <id>6</id>
+    <nombre>Smartphone</nombre>
+    <descripcion>Teléfono inteligente con cámara de 48MP</descripcion>
+    <categoria>Electrónica</categoria>
+    <precio>800</precio>
+    <imagen>../public/images/smartphone.webp</imagen>
+    <instock>true</instock>
+  </producto>
+</productos>
